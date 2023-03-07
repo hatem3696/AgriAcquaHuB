@@ -1,22 +1,55 @@
 <?php
-	session_start();
-	if(isset($_SESSION['user'])){
-			header('location:profile.php');
-		}
-	if(isset($_POST['submit'])){
-		$user = $_POST['user'];// save username to user variable 
-		$pass = $_POST['pass'];// save password to pass variable 
+session_start();
+if (isset($_SESSION['user'])) {
+	header('location:profile.php');
+}
+if (isset($_POST['submit'])) {
+	$user = $_POST['user']; // save username to user variable 
+	$pass = $_POST['pass']; // save password to pass variable 
 
-		//session_start();
-		$_SESSION['user'] = $user;
-		$_SESSION['pass'] = $pass;
+	//session_start();
+	$_SESSION['user'] = $user;
+	$_SESSION['pass'] = $pass;
 
-		//echo "Hi ". $_SESSION['user'];
-		header('location:profile.php');
+	//echo "Hi ". $_SESSION['user'];
+	header('location:profile.php');
+}
+?>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	// Define variables and set to empty values
+	$username = $password = "";
+
+	// Validate input and store in variables
+	if (empty($_POST["username"])) {
+		echo "<p>Username is required.</p>";
+	} else {
+		$username = test_input($_POST["username"]);
 	}
+
+	if (empty($_POST["password"])) {
+		echo "<p>Password is required.</p>";
+	} else {
+		$password = test_input($_POST["password"]);
+	}
+
+
+	// Use the variables for login or authentication
+	// ...
+}
+
+function test_input($data)
+{
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,14 +57,18 @@
 	<link rel="stylesheet" type="text/css" href="CSS/login.css">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+
 </head>
+
 <body>
-<?php include 'header.php'; ?>
-<br>
-<br>
+	<div class="lHeader">
+		<?php include 'header.php'; ?>
+
+	</div>
+
 
 
 	<div class="container">
@@ -57,41 +94,13 @@
 			</div>
 		</form>
 	</div>
-    <?php
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	// Define variables and set to empty values
-	$username = $password = "";
 
-	// Validate input and store in variables
-	if (empty($_POST["username"])) {
-		echo "<p>Username is required.</p>";
-	} else {
-		$username = test_input($_POST["username"]);
-	}
-	
-	if (empty($_POST["password"])) {
-		echo "<p>Password is required.</p>";
-	} else {
-		$password = test_input($_POST["password"]);
-	}
-	
+	<br>
 
-	// Use the variables for login or authentication
-	// ...
-}
+	<br>
 
-function test_input($data) {
-	$data = trim($data);
-	$data = stripslashes($data);
-	$data = htmlspecialchars($data);
-	return $data;
-}
-?>
-<br>
-
-<br>
-
-<br>
-<?php include 'footer.php'; ?>
+	<br>
+	<?php include 'footer.php'; ?>
 </body>
+
 </html>

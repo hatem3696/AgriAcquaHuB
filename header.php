@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>My Website</title>
-  <link rel="stylesheet" href="CSS/navbar.css">
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
 </head>
+
 <body>
-<div class="hero">
+    <div class="hero">
         <nav>
             <h2 class="logo">
                 Agri-<span>Aqua-HuB</span>
@@ -27,4 +30,5 @@
         </nav>
     </div>
 </body>
+
 </html>
