@@ -1,85 +1,54 @@
-/* Professional CSS styling for Agriculture page */
-
-/* General Styling */
-body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	background-color: #f5f5f5;
-}
-
-h1 {
-	font-size: 36px;
-	color: #006400;
-	margin: 20px 0 0 20px;
-}
-
-p {
-	font-size: 24px;
+.main-title {
+	font-size: 48px;
+	font-weight: bold;
 	color: #333;
-	margin: 20px 0 0 20px;
+	text-align: center;
+	margin-top: 50px;
 }
 
-form {
-	margin: 20px 0 0 20px;
+/* Style the sub title */
+.sub-title {
+	font-size: 24px;
+	font-weight: normal;
+	color: #666;
+	text-align: center;
+	margin-bottom: 50px;
 }
 
-input[type=radio] {
+/* Style the form */
+#needs-form {
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 0 0 10px #ccc;
+	border-radius: 5px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+/* Style the need options */
+.need-option {
 	margin-right: 10px;
 }
 
-label {
-	font-size: 20px;
-	color: #333;
-}
-
-input[type=submit] {
-	font-size: 20px;
+/* Style the submit button */
+.submit-button {
+	background-color: #0077cc;
 	color: #fff;
-	background-color: #006400;
-	border: none;
-	border-radius: 5px;
 	padding: 10px 20px;
-	margin: 20px 0 0 20px;
+	border-radius: 5px;
+	border: none;
+	font-size: 16px;
+	font-weight: bold;
 	cursor: pointer;
+	margin-top: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-input[type=submit]:hover {
-	background-color: #008000;
+/* Add animation and hover effects to the submit button */
+.submit-button:hover {
+	transform: scale(1.1);
+	transition: transform 0.3s ease-in-out;
+	background-color: #005fa3;
 }
-
-/* Specific Styling for Different Options */
-#seeds + label {
-	color: #008000;
-	font-weight: bold;
-}
-
-#crops + label {
-	color: #0000ff;
-	font-weight: bold;
-}
-
-#problems + label {
-	color: #ff0000;
-	font-weight: bold;
-}
-
-/* Media Queries */
-@media only screen and (max-width: 600px) {
-	h1 {
-		font-size: 24px;
-		margin: 10px 0 0 10px;
-	}
-
-	p {
-		font-size: 18px;
-		margin: 10px 0 0 10px;
-	}
-
-	form {
-		margin: 10px 0 0 10px;
-	}
-
-	input[type=submit] {
-		font-size: 16px;
-		padding: 

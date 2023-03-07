@@ -105,7 +105,7 @@
 
    <section class="about">
     <div class ="main">
-        <img class="img" src="./img/contactus.jpg" alt="">
+        <img class="img" src="./img/aboutus.jpg" alt="">
         <div class="text">
             <h1>About us</h1>
             <h4>Agriculture <span>& Aquaculture</span> </h4>

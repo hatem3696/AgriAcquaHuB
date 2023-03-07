@@ -1,38 +1,4 @@
-<?php
-session_start();
 
-// Define variables and initialize with empty values
-$name = $email = $website = $comment = $gender = "";
-$nameErr = $emailErr = $websiteErr = $genderErr = "";
-
-// Function to test input fields for special characters and remove unnecessary whitespace
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-
-// Validate name field
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
-  } else {
-    $name = test_input($_POST["name"]);
-    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed";
-    }
-  }
-
-  // Validate email field
-  if (empty($_POST["email"])) {
-    $emailErr = "Email is required";
-  } else {
-    $email = test_input($_POST["email"]);
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $emailErr = "Invalid email format";
-    }
-  }
 <!DOCTYPE html>
 <html>
 <head>

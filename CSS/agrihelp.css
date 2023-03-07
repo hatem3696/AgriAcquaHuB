@@ -1,0 +1,147 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f0f0f0;
+    
+}
+
+header {
+	background-color: #00aaff;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
+
+h1 {
+	margin: 0;
+}
+
+form {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	box-shadow: 0 0 10px #ddd;
+	padding: 20px;
+	margin: 20px auto;
+	max-width: 600px;
+}
+
+label {
+	display: block;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+input[type="text"],
+select {
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	width: 100%;
+}
+
+input[type="submit"] {
+	margin-top: 20px;
+	background-color: #00aaff;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #0077cc;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+    margin-top: 20px;
+    }
+    
+    /* Add some animation and hover effects */
+    input[type="submit"]:hover,
+    li:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    }
+    
+    /* Change the background color of the header on hover */
+    header:hover {
+    background-color: #0077cc;
+    }
+    
+    /* Add a gradient background to the body */
+    body {
+    background: linear-gradient(to bottom right, #00aaff, #0077cc);
+    }
+    
+    /* Add some padding to the header and center the text */
+    header {
+    padding: 20px;
+    text-align: center;
+    }
+    
+    /* Add a shadow to the form */
+    form {
+    box-shadow: 0 0 20px #ccc;
+    }
+    
+    /* Change the font and color of the header */
+    header {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #fff;
+    font-size: 36px;
+    }
+    
+    /* Change the font and color of the form labels */
+    label {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    }
+    
+    /* Add a subtle background color to the form input fields */
+    input[type="text"],
+    select {
+    background-color: #f8f8f8;
+    }
+    
+    /* Add some padding and margin to the list items */
+    li {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    }
+    
+    /* Change the font and color of the list items */
+    li {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+    }
+    
+    /* Change the font and color of the list item headings */
+    h2 {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #0077cc;
+    font-size: 24px;
+    font-weight: bold;
+    }
+    
+    /* Add some padding to the body */
+    body {
+    padding: 20px;
+    }
+    
+    /* Change the color of the submit button text */
+    input[type="submit"] {
+    color: #fff;
+    }

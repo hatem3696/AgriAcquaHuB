@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>AgriHelp</title>
+	<link rel="stylesheet" href="CSS/agrihelp.css">
 	<style type="text/css">
 		label {
 			display: block;
@@ -15,6 +16,7 @@
 		}
 	</style>
 </head>
+<?php include 'header.php'; ?>
 <body>
 	<form method="post">
 		<label for="name">What's your name?</label>
@@ -125,3 +127,30 @@
 					break;
 
                 case 10 :
+					echo "<h2>Solutions Equipment and machinery </h2>";
+					echo "<ul>";
+					echo "<li>Cope with climate change, soil erosion and biodiversity loss </li>";
+                    echo "<li>Satisfy consumers' changing tastes and expectations.</li>";
+                    echo "<li>Meet rising demand for more food of higher quality..</li>";
+                    echo "<li>Make Training an Ongoing Process.</li>";
+                    echo "<li>Invest in farm productivity. </li>";
+                    echo "<li>Adopt and learn new technologies.</li>";
+                    echo "<li>Stay resilient against global economic factors. </li>";
+                    echo "<li>Inspire young people to stay in rural areas and become future farmers</li>";
+                    echo "<li>Maintain and repair equipment regularly to prevent breakdowns and downtime</li>";
+					echo "<li>Upgrade or replace outdated equipment to improve efficiency and productivity</li>";
+					echo "<li>Implement safety protocols to protect workers from accidents</li>";
+					echo "</ul>";
+					break;
+					default:
+					echo "<p>Please select a problem to get solutions</p>";
+					break;
+						}
+				} else {
+echo "<p>Please enter your name and select a problem to get solutions</p>";
+					}
+					}
+					?>
+
+</body>
+</html>
