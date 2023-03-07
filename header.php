@@ -19,7 +19,7 @@
                 <li><a href="Home.php">Home</a></li>
                 <li><a href="Login.php">Log in</a></li>
                 <li><a href="agriculture.php">Agriculture</a></li>
-                <li><a href="Login.php">Acquaculture</a></li>
+                <li><a href="acquaculture.php">Acquaculture</a></li>
                 <li><a href="aboutus.php">About us</a></li>
                 <li><a href="contact_us.php">Contact us</a></li>
             </ul>
