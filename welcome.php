@@ -1,6 +1,6 @@
 <?php
-$username= "admin"
-$
+$username = "admin";
+
 // Start session
 session_start();
 

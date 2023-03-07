@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 <?php
 session_start();
 ?>
+=======
+
+>>>>>>> 393f948f24e730daab68db7614f515ebb843671c
 <!DOCTYPE html>
 <html>
 
