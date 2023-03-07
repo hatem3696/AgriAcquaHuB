@@ -1,0 +1,85 @@
+/* Professional CSS styling for Agriculture page */
+
+/* General Styling */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f5f5f5;
+}
+
+h1 {
+	font-size: 36px;
+	color: #006400;
+	margin: 20px 0 0 20px;
+}
+
+p {
+	font-size: 24px;
+	color: #333;
+	margin: 20px 0 0 20px;
+}
+
+form {
+	margin: 20px 0 0 20px;
+}
+
+input[type=radio] {
+	margin-right: 10px;
+}
+
+label {
+	font-size: 20px;
+	color: #333;
+}
+
+input[type=submit] {
+	font-size: 20px;
+	color: #fff;
+	background-color: #006400;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin: 20px 0 0 20px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #008000;
+}
+
+/* Specific Styling for Different Options */
+#seeds + label {
+	color: #008000;
+	font-weight: bold;
+}
+
+#crops + label {
+	color: #0000ff;
+	font-weight: bold;
+}
+
+#problems + label {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 24px;
+		margin: 10px 0 0 10px;
+	}
+
+	p {
+		font-size: 18px;
+		margin: 10px 0 0 10px;
+	}
+
+	form {
+		margin: 10px 0 0 10px;
+	}
+
+	input[type=submit] {
+		font-size: 16px;
+		padding: 
