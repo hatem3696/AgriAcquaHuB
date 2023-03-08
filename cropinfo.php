@@ -2,14 +2,15 @@
 <html>
 <head>
 	<title>Crop Information</title>
+	<link rel="stylesheet" type="text/css" href="CSS/cropinfo.css">
 </head>
 <body>
-<?php include 'header.php'; ?>
+	<?php include 'header.php'; ?>
 	<h1>Crop Information</h1>
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-		<label for="crop">Select a crop:</label>
-		<select id="crop" name="crop">
-			<option value="rice">Rice</option>
+		<label for="crop-select">Select a crop:</label>
+		<select id="crop-select" name="crop" class="select-box">
+			<option value="Rice">Rice</option>
 			<option value="onion">Onion</option>
 			<option value="maize">Maize</option>
 			<option value="soyaben">Soyaben</option>
@@ -28,7 +29,7 @@
 	// Check if the form has been submitted
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$crop = $_POST["crop"];
-		$filename = "crops/" . $crop . ".txt";
+		$filename = "crops/" . $crop.".txt";
 
 		// Check if the file exists
 		if (file_exists($filename)) {

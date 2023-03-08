@@ -151,6 +151,6 @@ echo "<p>Please enter your name and select a problem to get solutions</p>";
 					}
 					}
 					?>
-
+ <?php include 'footer.php'; ?>
 </body>
 </html>

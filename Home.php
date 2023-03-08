@@ -19,7 +19,7 @@ session_start();
       font-family: 'Roboto Slab', serif;
       font-size: 25px;
       line-height: 1.5;
-      text-align: center;
+      
     }
 
     #header {
@@ -33,17 +33,7 @@ session_start();
       font-size: 32px;
     }
 
-    #footer {
-      background-color: #2F4F4F;
-      color: #FFFFFF;
-      padding: 20px;
-      text-align: center;
-    }
-
-    #footer p {
-      margin: 0;
-    }
-
+   
     #content {
       padding: 20px;
       text-align: center;
@@ -71,11 +61,8 @@ session_start();
     <img src="./img/hq.jpg" alt="">
   </div>
 
-
-  <div id="footer">
-    <p>&copy; 2023 Agri Acqua HUB</p>
-  </div>
   <?php include 'footer.php'; ?>
+  
 </body>
 
 </html>

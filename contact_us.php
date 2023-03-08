@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="CSS/contactus.css">
 </head>
-<body style=>
+<body >
 
 
   <?php include 'header.php'; ?>

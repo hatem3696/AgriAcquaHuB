@@ -1,0 +1,59 @@
+container {
+			background-color: #f1f1f1;
+			padding: 20px;
+			margin-top: 20px;
+			border-radius: 5px;
+		}
+/* Select box styles */
+.select-box {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.2s ease-in-out;
+  }
+  
+  /* Select box hover styles */
+  .select-box:hover {
+    border-color: #666;
+  }
+  
+  /* Select box focus styles */
+  .select-box:focus {
+    outline: none;
+    border-color: #00bfff;
+    box-shadow: 0 0 0 2px #00bfff33;
+  }
+  
+  /* Submit button styles */
+  input[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    background-color: #00bfff;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  /* Submit button hover styles */
+  input[type="submit"]:hover {
+    background-color: #0080ff;
+  }
+  
+  /* Crop information heading styles */
+  h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Crop information paragraph styles */
+  p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;

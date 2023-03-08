@@ -100,7 +100,9 @@ function test_input($data)
 	<br>
 
 	<br>
-	<?php include 'footer.php'; ?>
+	<div>
+	<?php include 'Footer.php'; ?>
+</div>
 </body>
 
 </html>

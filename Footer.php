@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>My Website</title>
- 
 </head>
 <body>
   <div style="background-color: #2F4F4F; color: #FFFFFF; padding: 20px;">
