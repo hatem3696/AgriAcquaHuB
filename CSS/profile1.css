@@ -1,0 +1,70 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #eee;
+  margin: 20px 0;
+}
+
+/* Title styles */
+.title {
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Form styles */
+.form-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.label {
+  display: block;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.select {
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+.submit-button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  margin: 20px auto 0;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #3e8e41;
+}
+
+/* Welcome message styles */
+.welcome {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/*

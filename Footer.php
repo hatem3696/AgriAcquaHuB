@@ -1,19 +1,25 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <title>My Website</title>
+  <link rel="stylesheet" href="CSS/footer.css">
 </head>
 <body>
-  <div style="background-color: #2F4F4F; color: #FFFFFF; padding: 20px;">
-    <h3 style="margin: 0; font-size: 20px;">Contact Us</h3>
-    <p style="font-size: 16px; margin-bottom: 10px;">Aiub</p>
-    <p style="font-size: 16px; margin-bottom: 10px;">Email: info@ag-aqua-hub.com</p>
-    <p style="font-size: 16px; margin-bottom: 10px;">Phone: 555-1234</p>
-    <div style="display: flex; justify-content: space-between;">
-      <p style="font-size: 16px; margin: 0;">Copyright &copy; <?php echo date("Y"); ?> Agriculture Aquaculture Hub</p>
-      <p style="font-size: 16px; margin: 0;">Designed by Abdul , NAfim , Pranto</p>
-    </div>
-  </div>
+  <footer id="footer">
+    <h3>Contact Us</h3>
+    <p>Aiub</p>
+    <p>Email: info@ag-aqua-hub.com</p>
+    <p>Phone: 555-1234</p>
+    <p style="font-size: 16px; margin: 0;">&copy; <?php echo date("Y"); ?> Agriculture Aquaculture Hub</p>
+    <p class="designer">Designed by Abdul Hayee</p>
+</footer>
 </body>
 </html>
+
+
+
+
+
+

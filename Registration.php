@@ -23,7 +23,8 @@ session_start();
 </head>
 
 <body>
-	<?php include 'header.php'; ?>
+	
+<?php include 'header.php'; ?>
 	<section class="main">
 		<h1 class="title">Registration Form</h1>
 		<form Action="RegAction.php" method="POST">

@@ -15,8 +15,8 @@
     <section class="contact">
         <div class="contact-form">
             <h1>Contact <span>Us</span></h1>
-        <p>I am available for freelance work.Connect with via phone : 01827175767
-            or email : abdulhayee5767@gmail.com
+        <p>As a valued user of the Agriculture Aquaculture Hub website, we would love to hear from you and provide any assistance or information you may need. Our team is committed to providing the best possible service to all of our users.
+             
         </p>
         
         <form action="">
@@ -31,7 +31,7 @@
         
     </div>
     <div class="My-image">
-        <img src="./img/contactus.jpg" alt="">
+        <img src="./img/4th.jpg" alt="" >
     </div>   
     
     <?php

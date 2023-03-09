@@ -1,27 +1,4 @@
-<?php
-if(isset($_POST['submit'])){
-    if(isset($_POST['need'])){
-        $need = $_POST['need'];
-        switch ($need) {
-            case 'buy-fish-farming':
-                header('Location: fishfarming.php');
-                break;
-            case 'buy-fish-aquarium':
-                header('Location: buyfishaquarium.php');
-                break;
-            case 'fish-info':
-                header('Location: fishinfo.php');
-                break;
-            case 'fish-farming-info':
-                header('Location: fishfarminginfo.php');
-                break;
-            default:
-                echo "Please select an option";
-                break;
-        }
-    }
-}
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,6 +21,30 @@ if(isset($_POST['submit'])){
         <input type="submit" name="submit" value="Submit" class="submit-button">
     </form>
     <br>
+    <?php
+if(isset($_POST['submit'])){
+    if(isset($_POST['need'])){
+        $need = $_POST['need'];
+        switch ($need) {
+            case 'buy-fish-farming':
+                header('Location: buyfishfarming.php');
+                break;
+            case 'buy-fish-aquarium':
+                header('Location: buyfishaquarium.php');
+                break;
+            case 'fish-info':
+                header('Location: fishinfo.php');
+                break;
+            case 'fish-farming-info':
+                header('Location: fishfarminginfo.php');
+                break;
+            default:
+                echo "Please select an option";
+                break;
+        }
+    }
+}
+?>
 </body>
 </html>
 

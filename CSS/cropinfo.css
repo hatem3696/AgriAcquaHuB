@@ -57,3 +57,21 @@ container {
     font-size: 16px;
     line-height: 1.5;
     color: #666;
+  }
+    .zawrin{
+      text-align: center;
+    }
+    .selectorx{
+      display: grid;
+    justify-content: center ;
+    
+    }
+    .selectory{
+      display: flex;
+    }
+    label{
+      margin-top: 15px;
+    }
+    input{
+      margin-top: 20px;
+    }

@@ -1,62 +1,101 @@
-/* Global styles */
+/* Apply global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+#fish-image {
+  width: 300px;
+  height: 200px;
+  margin-top: 10px;
+}
+#fish-info {
+  text-align: center;
+}
+#buy-now-button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  width: 100px;
+}
+/* Style the header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* Style the main section */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style the fish select element */
+.fish-select {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 5px 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Style the fish image */
+.fish-image {
+  width: 300px;
+  height: 200px;
+  margin-top: 10px;
+}
+
+/* Style the fish info div */
+.fish-info {
+  text-align: center;
+}
+
+/* Style the fish price div */
+.fish-price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Style the buy now button */
+.buy-now-button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  width: 100px;
+  transition: background-color 0.3s ease;
+}
+
+/* Add hover effect to the buy now button */
+.buy-now-button:hover {
+  background-color: #3e8e41;
+}
+
+/* Add animation to the header text */
+header h1 {
+  animation: pulse 1s ease-in-out infinite alternate;
+}
+
+/* Define the pulse animation */
+@keyframes pulse {
+  from {
+    transform: scale(1);
   }
-  
-  /* Header styles */
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+  to {
+    transform: scale(1.1);
   }
-  
-  header h1 {
-    margin: 0;
-  }
-  
-  header a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Main content styles */
-  
-  .main-title {
-    font-size: 40px;
-    margin-top: 50px;
-    text-align: center;
-  }
-  
-  .sub-title {
-    font-size: 24px;
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .need-option {
-    margin-right: 10px;
-  }
-  
-  .submit-button {
-    background-color: #333;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-  
-  /* Footer styles */
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
+}

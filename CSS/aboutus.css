@@ -1,9 +1,22 @@
 /* Basic styles for the about section */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  
+  /* padding: 0 10%; Anas Removed */
+}
+
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    
   }
   
   .main {

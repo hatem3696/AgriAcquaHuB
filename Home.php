@@ -51,18 +51,40 @@ session_start();
     #content img {
       height: 100vh;
       width: 100%;
+
+      
   </style>
 
 </head>
-
 <body>
-  <?php include 'header.php'; ?>
+<?php include 'header.php'; ?>
   <div id="content">
-    <img src="./img/hq.jpg" alt="">
+    <div class="image-container">
+    <img src="./img/hq.jpg" alt="" class="image">
+      <img src="./img/2nd.jpg" alt="" class="image">
+      <img src="./img/3rd.jpg" alt="" class="image">
+      
+    </div>
   </div>
-
   <?php include 'footer.php'; ?>
-  
-</body>
 
+  <style>
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .image {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      transition: transform 0.5s ease;
+    }
+
+    .image:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</body>
 </html>

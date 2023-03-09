@@ -5,6 +5,7 @@
     
   </head>
   <body>
+  <?php include 'header.php'; ?>
     <header>
       <h1>Buy Fish Farming</h1>
     </header>
@@ -13,16 +14,12 @@
       <form>
         <label for="fish-select">Choose a fish:</label>
         <select id="fish-select">
-          <option value="boal">Boal</option>
-          <option value="chitol">Chitol</option>
-          <option value="ilish">Ilish</option>
-          <option value="katla">Katla</option>
-          <option value="koi">Koi</option>
-          <option value="pabda">Pabda</option>
-          <option value="pangas">Pangas</option>
-          <option value="rui">Rui</option>
-          <option value="singi">Singi</option>
-          <option value="tilapia">Tilapia</option>
+          <option value="Angelfish">AngelFish</option>
+          <option value="Betta">Betta</option>
+          <option value="Discus">Discus</option>
+          <option value="Guppies">Guppies</option>
+          <option value="Neon">Neon</option>
+         
         </select>
       </form>
       <div id="fish-info">

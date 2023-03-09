@@ -6,22 +6,25 @@
 </head>
 <body>
 	<?php include 'header.php'; ?>
-	<h1>Crop Information</h1>
-	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+	<h1 class="zawrin">Crop Information</h1>
+	<form class ="selectorx" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+	<div class="selectory">
 		<label for="crop-select">Select a crop:</label>
 		<select id="crop-select" name="crop" class="select-box">
 			<option value="Rice">Rice</option>
-			<option value="onion">Onion</option>
-			<option value="maize">Maize</option>
-			<option value="soyaben">Soyaben</option>
-			<option value="cotton">Cotton</option>
-			<option value="jute">Jute</option>
-			<option value="tomato">Tomato</option>
-			<option value="potato">Potato</option>
-			<option value="eggplant">Eggplant</option>
-			<option value="cucumber">Cucumber</option>
+			<option value="Onion">Onion</option>
+			<option value="Maize">Maize</option>
+			<option value="Soyaben">Soyaben</option>
+			<option value="Cotton">Cotton</option>
+			<option value="Jute">Jute</option>
+			<option value="Tomato">Tomato</option>
+			<option value="Potato">Potato</option>
+			<option value="Eggplant">Eggplant</option>
+			<option value="Cucumber">Cucumber</option>
 		</select>
 		<br><br>
+</div>
+
 		<input type="submit" name="submit" value="Submit">
 	</form>
 

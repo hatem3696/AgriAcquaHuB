@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Buy Fish for Farming</title>
+	<title> Fish information</title>
 	<link rel="stylesheet" href="CSS/buyfishfarming.css">
 </head>
 <body>
@@ -36,17 +36,17 @@
 <?php
 	// Check if the form has been submitted
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		$crop = $_POST["fish"];
-		$filename = "fish/" . $fish.".txt";
+		$fish = $_POST["fish"];
+		$filename = "fish/" .$fish.".txt";
 
 		// Check if the file exists
 		if (file_exists($filename)) {
 			// Read the contents of the file and display it
 			$info = file_get_contents($filename);
-			echo "<h2>$crop Information</h2>";
+			echo "<h2>$fish Information</h2>";
 			echo "<p>$info</p>";
 		} else {
-			echo "<p>Sorry, information about $crop is not available.</p>";
+			echo "<p>Sorry, information about $fish is not available.</p>";
 		}
 	}
 	?>

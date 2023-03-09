@@ -1,19 +1,42 @@
 <?php include('header.php');?>
-<h1>Profile page</h1>
-<hr>
 <?php
 	session_start();
 	if(isset($_SESSION['user'])){
-		echo "<h1>Succesfully Logged in By ". $_SESSION['user']."</h1>"; 
-		echo"<br>";
-
-		echo "<br> <a href ='logout.php'> 
-		<input type =button value =LOGOUT name=></a>" ;
-
-		echo "<br> <a href ='post.php'> 
-		<input type =button value =Upload-picture name= </a>" ;
-		
-	}
-		
-	
+		echo "<h1 class='welcome'>Succesfully Logged in By ". $_SESSION['user']."</h1>"; 
+		echo "<div class='button-wrapper'><a href ='logout.php' class='button logout'>LOGOUT</a></div>";
+	} else {
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Profile page</title>
+	<link rel="stylesheet" type="text/css" href="CSS/profile1.css">
+</head>
+<body>
+	<h1 class="title">Profile page</h1>
+	<hr>
+
+	<form method="post" action="">
+		<label for="login-as" class="label">What do you want to be logged in as?</label><br>
+		<select name="login-as" id="login-as" class="select">
+			<option value="Farmer">Farmer</option>
+			<option value="Fisher">Fisher</option>
+			<option value="Admin">Admin</option>
+		</select><br><br>
+		<input type="submit" name="submit" value="Log in" class="submit-button">
+	</form>
+		
+	<?php
+	}
+	if(isset($_POST['submit'])){
+		if(isset($_POST['login-as'])){
+			$login_as = $_POST['login-as'];
+			echo "<h1 class='welcome'>Dear user, you are logged in as a $login_as</h1>";
+		}
+	}
+	?>
+</body>
+</html>
+
