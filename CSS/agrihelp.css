@@ -109,7 +109,7 @@ h2 {
     /* Add a subtle background color to the form input fields */
     input[type="text"],
     select {
-    background-color: #f8f8f8;
+    
     }
     
     /* Add some padding and margin to the list items */
@@ -117,7 +117,7 @@ h2 {
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    background-color: #f0f0f0;
+    
     }
     
     /* Change the font and color of the list items */

@@ -1,0 +1,130 @@
+/* Center the registration form */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Style the form */
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Add some animations */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="submit"] {
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Add some hover effects */
+  input[type="text"]:hover,
+  input[type="email"]:
+  input[type=password"]:focus,
+  input[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+  border: 2px solid #3498db;
+  }
+  
+  input[type="submit"]:hover {
+  background-color: #2980b9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Add some custom styles */
+  .container {
+  background-color: #3498db;
+  background-image: linear-gradient(to bottom right, #3498db, #4db8ff);
+  }
+  
+  h2 {
+  color: #fff;
+  }
+  
+  label {
+  color: #333;
+  }
+  
+  input[type="submit"] {
+  background-color: #fff;
+  color: #3498db;
+  transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+  background-color: #3498db;
+  color: #fff;
+  }  
+  .container {
+    display: flex;
+    justify-content: center;
+    max-width: 1800px;
+   
+  }
+  
