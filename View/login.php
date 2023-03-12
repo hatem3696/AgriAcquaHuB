@@ -24,15 +24,15 @@
 
 	<div class="container">
 		<h1>Log in</h1>
-		<form method="post" action="../Control/login.php">
+		<form method="post" action="../Control/LoginController.php">
 			<div class="main">
-				<input type="text" name="user" required>
+				<input type="text" name="user">
 				<span></span>
 				<label>Username</label>
 			</div>
 
 			<div class="main">
-				<input type="password" name="pass" required>
+				<input type="password" name="pass">
 				<span></span>
 				<label>Password</label>
 			</div>
@@ -56,7 +56,7 @@
 
 	<br>
 	<div>
-	<?php include '../View/Footer.php'; ?>
+		<?php include '../View/Footer.php'; ?>
 </body>
 
 </html>
