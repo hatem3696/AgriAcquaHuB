@@ -15,3 +15,4 @@ echo "Welcome, " . $_SESSION['username'] . "!";
 
 // TODO: Implement any other functionality for authenticated users here
 ?>
+//check
