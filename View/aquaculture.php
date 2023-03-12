@@ -4,6 +4,12 @@
 <head>
     <title>Aquaculture</title>
     <link rel="stylesheet" href="../CSS/agriculture.css">
+    <style>
+        <style>
+      h1 {
+        text-align: center;
+      }
+    </style>
 </head>
 <body>
 <?php include '../View/header.php'; ?>

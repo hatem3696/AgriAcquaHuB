@@ -127,7 +127,7 @@
 	</style>
 </head>
 <body>
-	<?php include 'header.php'; ?>
+<?php include '../View/header.php'; ?>
 	<h1 class="zawrin">Fish Information</h1>
 	<form class ="selectorx" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		<div class="selectory">
@@ -151,6 +151,13 @@
 		<input type="submit" name="submit" value="Submit">
 	</form>
 
+  <br>
+
+  <a href="buy-now-form.php">
+        <button style="display: block; margin: 0 auto;">Order Now</button>
+      </a>
+
+      <br>
 	<?php
 	// Check if the form has been submitted
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -172,6 +179,7 @@
 			}
 		}
 	?>
+  
 	<?php include '../View/Footer.php'; ?>
 </body>
 </html>

@@ -68,7 +68,7 @@
 <?php include '../View/header.php'; ?>
 	<div class="container">
 		<h1 class="success">Congrats!</h1>
-		<img src="https://media.giphy.com/media/l1IY1T0T96LwnF0fS/giphy.gif" alt="bow" class="bow">
+		<img src=https://media1.giphy.com/media/3oEdva9BUHPIs2SkGk/200w.webp?cid=ecf05e47ysp82uleclwwipfep78emoqv1ucpx85wenbrsvl9&rid=200w.webp&ct=g alt="bow" class="bow">
 		<p>Your order has been confirmed. We will send you an email with the details shortly. Thank you for shopping with us!</p>
 	</div>
 	<?php include '../View/Footer.php'; ?>

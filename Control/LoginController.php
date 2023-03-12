@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
-    header('location:../View/profile.php');
+    header('location:./View/profile.php');
 }
 
 if (isset($_POST['submit'])) {

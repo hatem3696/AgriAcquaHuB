@@ -148,8 +148,10 @@
     <br>
 
 
-    <br>
+    
 	</form>
+  <br>
+
 
 	<?php
 	// Check if the form has been submitted
@@ -172,6 +174,16 @@
 			}
 		}
 	?>
+  <br>
+
+<br>
+
+<a href="buy-now-form.php">
+    <button style="display: block; margin: 0 auto;">Order Now</button>
+  </a>
+  <br>
+
+  <br>
 	<?php include '../View/Footer.php'; ?>
 </body>
 </html>
