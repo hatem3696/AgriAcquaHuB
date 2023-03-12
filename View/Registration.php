@@ -30,86 +30,87 @@ session_start();
 					<span class="text">Full Name</span>
 					<input type="text" id="fname" name="fname" placeholder="Please enter your">
 					<?php
-					if (isset($SESSION['ErrorMsg'])) { ?>
-					<div>
-						<p style="color: red">
-
-								<?php
-
-								echo $SESSION['ErrorMsg'];
-								$SESSION['ErrorMsg'] = ""; ?>
-						</p>
-					</div>
-					<?php } ?>
+					if (isset($_SESSION['fnameError'])) {
+						echo '<p style="color:red">' . $_SESSION['fnameError'] . '</p><br>
+					';
+						$_SESSION['fnameError'] = "";
+					}
+					?>
 				</div>
 
 				<div class="input-box">
 					<span class="text">Username</span>
-					<input type="text" id="user" name="user" placeholder="Please enter your">
+					<input type="text" id="username" name="username" placeholder="Please enter your">
+					<?php
+					if (isset($_SESSION['usernameError'])) {
+						echo '<p style="color:red">' . $_SESSION['usernameError'] . '</p><br>
+					';
+						$_SESSION['usernameError'] = "";
+					}
+					?>
 				</div>
 
 				<div class="input-box">
 					<span class="text">Email</span>
 					<input type="email" id="email" name="email" placeholder="Email">
+					<?php
+					if (isset($_SESSION['emailError'])) {
+						echo '<p style="color:red">' . $_SESSION['emailError'] . '</p><br>
+					';
+						$_SESSION['emailError'] = "";
+					}
+					?>
 				</div>
 
 				<div class="input-box">
 					<span class="text">Phone Number</span>
 					<input type="text" id="phone" name="phone" placeholder="Phone Number">
+					<?php
+					if (isset($_SESSION['phnError'])) {
+						echo '<p style="color:red">' . $_SESSION['phnError'] . '</p><br>
+					';
+						$_SESSION['phnError'] = "";
+					}
+					?>
 				</div>
 
 				<div class="input-box">
 					<span class="text">Password</span>
 					<input type="Password" id="password" name="password" placeholder="Please enter your">
+					<?php
+					if (isset($_SESSION['passError'])) {
+						echo '<p style="color:red">' . $_SESSION['passError'] . '</p><br>
+					';
+						$_SESSION['passError'] = "";
+					}
+					?>
 				</div>
 
 				<div class="input-box">
 					<span class="text">Confirm Password</span>
 					<input type="Password" id="cpassword" name="cpassword" placeholder="Confirm your password">
-				</div>
-
-			</div>
-
-			<div class="container">
-				<input type="radio" name="gender" id="circle-1">
-				<input type="radio" name="gender" id="circle-2">
-				<input type="radio" name="gender" id="circle-3">
-				<span class="gender">Gender</span>
-				<div class="category">
-					<label for="circle-1">
-						<span class="circle one"></span>
-						<span class="male">Male</span>
-					</label>
-
-					<label for="circle-2">
-						<span class="circle two"></span>
-						<span class="male">female</span>
-					</label>
-
-					<label for="circle-3">
-						<span class="circle three"></span>
-						<span class="male">Other</span>
-					</label>
-
-				</div>
-
-
-				<div class="btn">
-					<input type="submit" value="Register">
+					<?php
+					if (isset($_SESSION['cpassError'])) {
+						echo '<p style="color:red">' . $_SESSION['cpassError'] . '</p><br>
+					';
+						$_SESSION['cpassError'] = "";
+					}
+					?>
 				</div>
 				<?php
+				if (isset($_SESSION['RegError'])) {
+					echo '<p style="text-align:center; color:red;">' . $_SESSION['RegError'] . '</p><br>
+					';
+					$_SESSION['RegError'] = "";
+				}
+				?>
+			</div>
 
-				if (isset($SESSION['ErrorMsg'])) { ?>
-				<div>
-					<p style="color: red">
 
-							<?php
+			<div class="btn">
+				<input type="submit" value="Register">
+			</div>
 
-							echo $SESSION['ErrorMsg'];
-							$SESSION['ErrorMsg'] = ""; ?>
-					</p>
-				</div>
-				<?php } ?>
 			</div>
 		</form>
 	</section>

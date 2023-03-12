@@ -1,3 +1,60 @@
+<?php
+session_start();
+
+
+include("../Control/Connection.php");
+
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+	$_SESSION['LoginError'] = "";
+	if (empty($username) && empty($password)) {
+		$_SESSION['LoginError'] = "Please enter your username & password";
+		header("Location: ../View/login.php");
+		exit();
+	}
+	if (empty($username)) {
+		$_SESSION['LoginError'] = "Please enter your username";
+		header("Location: ../View/login.php");
+		exit();
+	}
+	if (empty($password)) {
+		$_SESSION['LoginError'] = "Please enter your password!";
+		header("Location: ../View/login.php");
+		exit();
+	}
+	if (!empty($username) && !empty($password) && !is_numeric($username)) {
+
+		$query = "select * from users where Username = '$username' limit 1";
+		$result = mysqli_query($con, $query);
+
+		if ($result) {
+			if ($result && mysqli_num_rows($result) > 0) {
+
+				$user_data = mysqli_fetch_assoc($result);
+				if ($user_data['Password'] === $password) {
+					$_SESSION['User_Id'] = $user_data['User_Id'];
+					$_SESSION['username'] = $username;
+					$_SESSION['email'] = $user_data['Email'];
+					header("Location: ../View/profile.php");
+				}
+				$_SESSION['LoginError'] = "Incorrect username or password!";
+
+			}
+			$_SESSION['LoginError'] = "Incorrect username or password!";
+		}
+	} else if (empty($username) && empty($password)) {
+		$_SESSION['LoginError'] = "Please enter your username and password.";
+	}
+	mysqli_close($con);
+
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -24,24 +81,37 @@
 
 	<div class="container">
 		<h1>Log in</h1>
-		<form method="post" action="../Control/LoginController.php">
+		<form method="post" action="">
 			<div class="main">
-				<input type="text" name="user">
+				<input type="text" name="username">
 				<span></span>
 				<label>Username</label>
 			</div>
 
 			<div class="main">
-				<input type="password" name="pass">
+				<input type="password" name="password">
 				<span></span>
 				<label>Password</label>
 			</div>
+			<div>
+				<?php
+				if (isset($_SESSION['LoginError'])) {
+					echo '<p style="color:red">' . $_SESSION['LoginError'] . '</p><br>
+					';
+					$_SESSION['LoginError'] = "";
+				}
+				?>
+			</div>
 
-			<div class="pass">Don't have an account?</div>
+			<div class="pass">
+
+				Don't have an account?
+			</div>
 			<input type="submit" name="submit" value="Log In">
 
 			<div class="signup">
 				Not a member?? <a href="../View/Registration.php">Sign up here</a>
+
 			</div>
 		</form>
 	</div>
