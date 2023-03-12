@@ -64,5 +64,6 @@
 		<br>
 		<input type="submit" value="Submit">
 	</form>
+	<?php include '../View/Footer.php'; ?>
 </body>
 </html>

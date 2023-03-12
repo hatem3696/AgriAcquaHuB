@@ -65,10 +65,12 @@
 	</style>
 </head>
 <body>
+<?php include '../View/header.php'; ?>
 	<div class="container">
 		<h1 class="success">Congrats!</h1>
 		<img src="https://media.giphy.com/media/l1IY1T0T96LwnF0fS/giphy.gif" alt="bow" class="bow">
 		<p>Your order has been confirmed. We will send you an email with the details shortly. Thank you for shopping with us!</p>
 	</div>
+	<?php include '../View/Footer.php'; ?>
 </body>
 </html>
