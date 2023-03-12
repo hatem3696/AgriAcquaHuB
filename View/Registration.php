@@ -1,9 +1,7 @@
 <?php
 session_start();
 ?>
-=======
 
->>>>>>> 393f948f24e730daab68db7614f515ebb843671c
 <!DOCTYPE html>
 <html>
 
@@ -22,40 +20,52 @@ session_start();
 </head>
 
 <body>
-	
-<?php include '../View/header.php'; ?>
+
+	<?php include '../View/header.php'; ?>
 	<section class="main">
 		<h1 class="title">Registration Form</h1>
-		<form Action="./Control.RegAction.php" method="POST">
+		<form Action="../Control/RegAction.php" method="POST">
 			<div class="main-box">
 				<div class="input-box">
 					<span class="text">Full Name</span>
-					<input type="text" id="fname" name="fname" placeholder="Please enter your" required>
+					<input type="text" id="fname" name="fname" placeholder="Please enter your">
+					<?php
+					if (isset($SESSION['ErrorMsg'])) { ?>
+					<div>
+						<p style="color: red">
+
+								<?php
+
+								echo $SESSION['ErrorMsg'];
+								$SESSION['ErrorMsg'] = ""; ?>
+						</p>
+					</div>
+					<?php } ?>
 				</div>
 
 				<div class="input-box">
 					<span class="text">Username</span>
-					<input type="text" id="user" name="user" placeholder="Please enter your" required>
+					<input type="text" id="user" name="user" placeholder="Please enter your">
 				</div>
 
 				<div class="input-box">
 					<span class="text">Email</span>
-					<input type="email" id="email" name="email" placeholder="Email" required>
+					<input type="email" id="email" name="email" placeholder="Email">
 				</div>
 
 				<div class="input-box">
 					<span class="text">Phone Number</span>
-					<input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+					<input type="text" id="phone" name="phone" placeholder="Phone Number">
 				</div>
 
 				<div class="input-box">
 					<span class="text">Password</span>
-					<input type="Password" id="password" name="password" placeholder="Please enter your" required>
+					<input type="Password" id="password" name="password" placeholder="Please enter your">
 				</div>
 
 				<div class="input-box">
 					<span class="text">Confirm Password</span>
-					<input type="Password" id="cpassword" name="cpassword" placeholder="Confirm your password" required>
+					<input type="Password" id="cpassword" name="cpassword" placeholder="Confirm your password">
 				</div>
 
 			</div>
@@ -95,7 +105,8 @@ session_start();
 
 							<?php
 
-							echo $SESSION['ErrorMsg']; ?>
+							echo $SESSION['ErrorMsg'];
+							$SESSION['ErrorMsg'] = ""; ?>
 					</p>
 				</div>
 				<?php } ?>
