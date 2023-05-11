@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Fish Farming Information</title>
-	<link rel="stylesheet" href="../CSS/fishfarminginfo.css">
+	
 	<style>
 		#fish-form {
   display: flex;
@@ -22,6 +22,15 @@
   color: white;
   text-decoration: none;
   border-radius: 5px;
+}
+#img {
+  display: block;
+  margin: 10px auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+#img:hover {
+  transform: scale(1.3);
 }
 </style>
 </head>

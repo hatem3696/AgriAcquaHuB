@@ -2,8 +2,8 @@
 	session_start();
 	require_once('../View/buy-now-form.php');
 
-	$errors = [];
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	if(isset($_POST["submit"])) {
+		$errors = [];
 		$name = trim($_POST["name"]);
 		$email = trim($_POST["email"]);
 		$phone = trim($_POST["phone"]);
@@ -45,5 +45,10 @@
 			header("Location: ../View/confirmation.php");
 			exit();
 		}
+	}
+
+	// check if any of the input fields are empty
+	if(empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["phone"]) || empty($_POST["address"]) || empty($_POST["card"])) {
+		die("Please fill all the required fields.");
 	}
 ?>
