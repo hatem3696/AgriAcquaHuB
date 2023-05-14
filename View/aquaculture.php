@@ -1,18 +1,18 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Aquaculture</title>
     <link rel="stylesheet" href="../CSS/agriculture.css">
     <style>
-        <style>
-      h1 {
+    <style>h1 {
         text-align: center;
-      }
+    }
     </style>
 </head>
+
 <body>
-<?php include '../View/header.php'; ?>
+    <?php include '../View/header.php'; ?>
     <h1 class="main-title">Welcome to Aquaculture</h1>
     <p class="sub-title">What do you need help with today?</p>
     <form method="post" action="aquaculture.php" id="needs-form">
@@ -51,12 +51,7 @@ if(isset($_POST['submit'])){
     }
 }
 ?>
-<?php include '../View/Footer.php'; ?>
+    <?php include '../View/Footer.php'; ?>
 </body>
+
 </html>
-
-
-
-
-
-

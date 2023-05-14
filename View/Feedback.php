@@ -55,9 +55,11 @@
 </head>
 
 <body>
+    <?php include '../View/header.php'; ?>
     <h1>Feedback Form</h1>
 
-    <form id="feedbackForm" action="submit_feedback.php" method="post">
+    <form id="feedbackForm" action="done.php" method="post">
+
         <label for="name">Name:</label>
         <input type="text" id="name" name="name">
         <span id="nameError" class="error"></span>
@@ -104,11 +106,13 @@
                     isValid = false;
                 }
 
-                if (isValid) {
-                    // Submit the form if all validations pass
-                    $("#feedbackForm").submit();
-                }
-            });
+               
+                    if (isValid) {
+    // Submit the form if all validations pass
+    $("#feedbackForm").attr("action", "done.php"); // set the form action to "done.php"
+    $("#feedbackForm").submit(); // submit the form
+}
+
 
             // Function to validate email address
             function isValidEmail(email) {

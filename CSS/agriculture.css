@@ -1,74 +1,170 @@
 /* Set background color */
 body {
-	background-color: #f7f7f7;
+  background-color: #f7f7f7;
+}
+
+/* Style the main title */
+.main-title {
+  font-size: 3rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: #4caf50;
+}
+
+/* Style the sub title */
+.sub-title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Style the form */
+#needs-form {
+  margin: 2rem auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the radio buttons */
+.need-option {
+  margin: 1rem 0;
+}
+
+/* Style the submit button */
+.submit-button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Add hover effect to submit button */
+.submit-button:hover {
+  background-color: #fff;
+  color: #4caf50;
+  border: 2px solid #4caf50;
+}
+
+/* Add animation to submit button on click */
+.submit-button:active {
+  animation-name: button-click;
+  animation-duration: 0.3s;
+}
+
+/* Define animation for button click */
+@keyframes button-click {
+  0% {
+    transform: scale(1);
   }
-  
-  /* Style the main title */
-  .main-title {
-	font-size: 3rem;
-	margin-top: 2rem;
-	text-align: center;
-	color: #4CAF50;
+  50% {
+    transform: scale(0.95);
   }
-  
-  /* Style the sub title */
-  .sub-title {
-	font-size: 1.5rem;
-	text-align: center;
-	color: #333;
+  100% {
+    transform: scale(1);
   }
-  
-  /* Style the form */
-  #needs-form {
-	margin: 2rem auto;
-	max-width: 500px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: #fff;
-	padding: 2rem;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  }
-  
-  /* Style the radio buttons */
-  .need-option {
-	margin: 1rem 0;
-  }
-  
-  /* Style the submit button */
-  .submit-button {
-	background-color: #4CAF50;
-	color: #fff;
-	border: none;
-	padding: 1rem 2rem;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: all 0.3s ease-in-out;
-  }
-  
-  /* Add hover effect to submit button */
-  .submit-button:hover {
-	background-color: #fff;
-	color: #4CAF50;
-	border: 2px solid #4CAF50;
-  }
-  
-  /* Add animation to submit button on click */
-  .submit-button:active {
-	animation-name: button-click;
-	animation-duration: 0.3s;
-  }
-  
-  /* Define animation for button click */
-  @keyframes button-click {
-	0% {
-	  transform: scale(1);
-	}
-	50% {
-	  transform: scale(0.95);
-	}
-	100% {
-	  transform: scale(1);
-	}
-  }
+}
+
+/* //// */
+.BookBodyControl {
+  background-color: hsl(0, 0%, 100%);
+
+  height: 100%;
+  width: 100%;
+}
+.BookBox {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  background-color: #30454b;
+  margin-top: 100px;
+  margin-left: 10%;
+  /* border: 1px solid black; */
+  box-shadow: 1px 1px 5px black;
+  border-radius: 10px;
+  height: 60px;
+  width: 80%;
+}
+.BookBoxResult {
+  background-color: #30454b;
+  margin-top: 20px;
+  margin-left: 130px;
+  /* border: 1px solid black; */
+  margin-left: 10%;
+
+  box-shadow: 1px 1px 5px black;
+  border-radius: 10px;
+  height: 550px;
+  width: 80%;
+}
+.BookBoxResult table {
+  background-color: #565555;
+  height: auto;
+  width: 100%;
+}
+
+.BookBox input[type="text"] {
+  color: #3b577d;
+  height: 30px;
+  width: 25%;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.BookBox select {
+  color: #3b577d;
+  height: 30px;
+  width: 130px;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.BookBox2 input[type="text"] {
+  color: #fff;
+  width: 900px;
+  height: 30px;
+  font-size: 16px;
+  padding: 5px;
+  background-color: #dc9f4acc;
+  border: 1px solid #30454b56;
+  border-radius: 5px;
+  margin-top: 300px;
+}
+.BookBox button {
+  height: 100px;
+  width: 100px;
+}
+.BookBox2 input[type="text"]:focus {
+  outline: none;
+}
+.BookBox2 ::placeholder {
+  color: white;
+}
+.BookBox button[type="submit"] {
+  height: 30px;
+  width: 100px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.BookBodyControl p {
+  color: #ffffff;
+}

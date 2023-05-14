@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>My Website</title>
-    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../../CSS/navbar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
@@ -24,22 +24,20 @@ if (session_status() == PHP_SESSION_NONE) {
                 Agri-<span>Aqua-HuB</span>
             </h2>
             <ul>
-                <li><a href="Home.php">Home</a></li>
-                <li><a href="Login.php">Log in</a></li>
-                <li><a href="agriculture.php">Agriculture</a></li>
-                <li><a href="aquaculture.php">Aquaculture</a></li>
-                <li><a href="workshop.php">Workshop</a></li>
-                <li><a href="packages.php">Packages</a></li>
-                <li><a href="job.php">Jobs</a></li>
-                <li><a href="Feedback.php">FeedBack</a></li>
-                <li><a href="aboutus.php">About us</a></li>
-                <li><a href="contact_us.php">Contact us</a></li>
+                <li><a href="../Home.php">Home</a></li>
+                <li><a href="../Login.php">Log in</a></li>
+                <li><a href="../agriculture.php">Agriculture</a></li>
+                <li><a href="../aquaculture.php">Aquaculture</a></li>
+                <li><a href="../workshop.php">Workshop</a></li>
+                <li><a href="../packages.php">Packages</a></li>
+                <li><a href="../aboutus.php">About us</a></li>
+                <li><a href="../contact_us.php">Contact us</a></li>
                 <?php
                     if (isset($_SESSION['username'])) {
 
                         if ($_SESSION['role'] == 'admin') {
                         ?>
-                <li><a href="Admin/AdminPanel.php">Admin Panel</a></li>
+                <li><a href="AdminPanel.php">Admin Panel</a></li>
 
 
 
