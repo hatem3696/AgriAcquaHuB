@@ -42,7 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 					header("Location: ../View/profile.php");
 				}
 				$_SESSION['LoginError'] = "Incorrect username or password!";
-
 			}
 			$_SESSION['LoginError'] = "Incorrect username or password!";
 		}
@@ -50,7 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$_SESSION['LoginError'] = "Please enter your username and password.";
 	}
 	mysqli_close($con);
-
 }
 
 ?>
@@ -82,16 +80,19 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     <div class="container">
         <h1>Log in</h1>
-        <form method="post" action="">
+        <form method="post" action="" onsubmit="return loginCheck()">
             <div class="main">
-                <input type="text" name="username">
+                <input type="text" id="username" name="username">
                 <span></span>
+                <p id="userErr" style="color:red"></p>
                 <label>Username</label>
+
             </div>
 
             <div class="main">
-                <input type="password" name="password">
+                <input type="password" id="password" name="password">
                 <span></span>
+                <p id="passErr" style="color:red"></p>
                 <label>Password</label>
             </div>
             <div>
@@ -102,6 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 					$_SESSION['LoginError'] = "";
 				}
 				?>
+
             </div>
 
             <div class="pass">
@@ -128,6 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <br>
     <div>
         <?php include '../View/Footer.php'; ?>
+        <script src="../View/js/login.js"></script>
 </body>
 
 </html>
