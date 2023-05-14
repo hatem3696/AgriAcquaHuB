@@ -14,6 +14,7 @@ include('../../Control/Admin/CreateWrkAction.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Package</title>
+<<<<<<< HEAD
     <style>
       
         /* Styling for the form */
@@ -83,6 +84,9 @@ h1 {
 }
 
 </style>
+=======
+    <link rel="stylesheet" href="../Assets/index.css">
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
 </head>
 
 <body>
@@ -99,12 +103,21 @@ h1 {
             include("../Admin/AdminPanelMenu.php");
             ?>
             <div class="AdminDash">
+<<<<<<< HEAD
             <fieldset
                    
                    <legend>
                        <h1 align="center">Create Workshops</h1>
                    </legend>
                </fieldset>
+=======
+                <fieldset
+                    style=" border: 4px solid #3B577D; border-bottom: none; border-left: none; border-right: none;">
+                    <legend style="text-align: left">
+                        <h1 align="center">Create Workshop</h1>
+                    </legend>
+                </fieldset>
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
                 <div class="" align="center">
                     <div>
 

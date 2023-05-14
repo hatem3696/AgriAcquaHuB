@@ -13,6 +13,7 @@ if ($_SESSION['role'] !== "admin" && $_SESSION['role'] !== "employee") {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Workshops</title>
+<<<<<<< HEAD
   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
         integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
@@ -66,6 +67,11 @@ h1 {
 
 
             </style>
+=======
+    <link rel="stylesheet" href="../Assets/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
 </head>
 
 
@@ -81,13 +87,22 @@ h1 {
             ?>
             <div class="AdminDash">
                 <fieldset
+<<<<<<< HEAD
                    
                     <legend>
+=======
+                    style=" border: 4px solid #3B577D; border-bottom: none; border-left: none; border-right: none;">
+                    <legend style="text-align: left">
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
                         <h1 align="center">Workshops</h1>
                     </legend>
                 </fieldset>
                 <table class="customers">
+<<<<<<< HEAD
                     <tr class="Table header" >
+=======
+                    <tr>
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
                         <th>Name</th>
                         <th>Description</th>
                         <th>Category</th>

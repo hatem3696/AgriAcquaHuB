@@ -30,8 +30,11 @@ if (session_status() == PHP_SESSION_NONE) {
                 <li><a href="aquaculture.php">Aquaculture</a></li>
                 <li><a href="workshop.php">Workshop</a></li>
                 <li><a href="packages.php">Packages</a></li>
+<<<<<<< HEAD
                 <li><a href="job.php">Jobs</a></li>
                 <li><a href="Feedback.php">FeedBack</a></li>
+=======
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
                 <li><a href="aboutus.php">About us</a></li>
                 <li><a href="contact_us.php">Contact us</a></li>
                 <?php

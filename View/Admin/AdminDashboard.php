@@ -13,6 +13,7 @@ include('../../Control/Admin/AdminDashboardController.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Body</title>
+<<<<<<< HEAD
     <style>
         body {
   font-family: Arial, sans-serif;
@@ -44,12 +45,16 @@ include('../../Control/Admin/AdminDashboardController.php');
   border-bottom: 2px solid #75914b;
 }
 </style>
+=======
+    <link rel="stylesheet" href="../Assets/index.css">
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
 </head>
 
 <body>
 
     <div class="AdminDash">
         <fieldset
+<<<<<<< HEAD
         <style
 fieldset {
   border: 4px solid #75914b;
@@ -70,14 +75,25 @@ h1 {
 <!-- Dashboard content here -->
 </fieldset>
            
+=======
+            style=" border: 4px solid #75914b; border-bottom: none; border-left: none; border-right: none; width:95%">
+            <legend style="text-align: left">
+                <h1 align="center">Dashboard</h1>
+            </legend>
+        </fieldset>
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
 
 
         <?php
         include_once('../../Control/Admin/AdminDashboardController.php');
         renderDashboardCards();
+<<<<<<< HEAD
         
         ?>
         
+=======
+        ?>
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
 </body>
 
 </html>

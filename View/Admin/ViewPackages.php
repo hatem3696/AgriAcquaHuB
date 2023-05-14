@@ -13,6 +13,7 @@ if ($_SESSION['role'] !== "admin" && $_SESSION['role'] !== "employee") {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Packages</title>
+<<<<<<< HEAD
     <style>
             /* add transition to the table */
 .customers {
@@ -63,6 +64,9 @@ if ($_SESSION['role'] !== "admin" && $_SESSION['role'] !== "employee") {
 
 
             </style>
+=======
+    <link rel="stylesheet" href="../Assets/index.css">
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
         integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
 </head>
@@ -80,12 +84,18 @@ if ($_SESSION['role'] !== "admin" && $_SESSION['role'] !== "employee") {
             ?>
             <div class="AdminDash">
                 <fieldset
+<<<<<<< HEAD
                 <fieldset
                    
                    <legend>
                        <h1 align="center">Packages</h1>
                    </legend>
                </fieldset>
+=======
+                    style=" border: 4px solid #3B577D; border-bottom: none; border-left: none; border-right: none;">
+                    <legend style="text-align: left">
+                        <h1 align="center">Packages</h1>
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
                     </legend>
                 </fieldset>
                 <table class="customers">

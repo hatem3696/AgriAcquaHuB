@@ -3,6 +3,7 @@
 
 <head>
     <title>Workshop</title>
+<<<<<<< HEAD
    
 
    
@@ -151,6 +152,26 @@ tr > :first-child {
 
 </style>   
     
+=======
+    <link rel="stylesheet" href="../CSS/agriculture.css">
+
+    <style>
+    h1 {
+        text-align: center;
+    }
+
+    #viewEmp th,
+    tr {
+        background-color: #ddf5f7;
+        color: #3b577d;
+        width: 500px;
+        text-align: center;
+        border-bottom: 1px solid #3B577D;
+        border-right: 1px solid #3B577D;
+        ;
+    }
+    </style>
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
 </head>
 
 <body>

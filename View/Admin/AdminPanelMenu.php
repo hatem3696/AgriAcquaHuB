@@ -43,7 +43,10 @@ if ($_SESSION['role'] !== "admin" && $_SESSION['role'] !== "employee") {
         </button>
 
     </div>
+<<<<<<< HEAD
     
+=======
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
 </body>
 
 </html>

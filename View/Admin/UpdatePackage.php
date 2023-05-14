@@ -32,6 +32,7 @@ if (isset($_GET['updatePack'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     
     <title>Update Packages</title>
     <style>
@@ -108,6 +109,24 @@ p[style="color:red; font-weight:500"] {
   margin-bottom: 10px;
 }
 
+=======
+    <link rel="stylesheet" href="index.css">
+    <title>Update Packages</title>
+    <style>
+    .check {
+        padding-top: 150px;
+        padding-left: 420px;
+        align-items: center;
+        color: #3B577D;
+        text-align: center;
+    }
+
+    .check button {
+        color: white !important;
+        background-color: green;
+        /* align: center; */
+    }
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
     </style>
 </head>
 
