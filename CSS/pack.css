@@ -1,0 +1,262 @@
+<<<<<<< HEAD
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #3b577d;
+  color: #fff;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.main-title {
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+  color: #3b577d;
+}
+
+/* Book box */
+.BookBodyControl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.BookBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.BookBox p {
+  margin: 0;
+  font-size: 20px;
+  color: #3b577d;
+}
+
+.BookBox select {
+  margin-top: 10px;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.BookBoxResult {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+}
+
+.BookBoxResult p {
+  margin: 0;
+  font-size: 24px;
+  color: #3b577d;
+}
+
+/* Packages card */
+=======
+/* packages card */
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
+.PackagesBody {
+  color: #3b577d;
+  height: 800px;
+  width: 99%;
+  background-color: #fff;
+  padding-top: 85px;
+  padding-left: 20px;
+}
+<<<<<<< HEAD
+
+.PcardContainer {
+  display: flex;
+=======
+.PcardContainer {
+  display: flex !important;
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+<<<<<<< HEAD
+
+.Pcard {
+  text-align: center;
+  width: 320px;
+  height: 400px;
+  background-color: #fff;
+=======
+.Pcard {
+  margin-top: 20px;
+  text-align: center !important;
+  width: 320px;
+  height: 200px;
+  border: 1px solid #ddd;
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+<<<<<<< HEAD
+.Pcard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.Pcard-header {
+  background-color: #3b577d;
+  padding: 10px;
+=======
+.Pcard-header {
+  background-color: #3b577d;
+  padding: 5px 10px;
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
+  border-bottom: 1px solid #ddd;
+}
+
+.Pcard-header p {
+<<<<<<< HEAD
+  color: #fff;
+  margin: 0;
+  font-size: 24px;
+=======
+  color: white;
+  margin: 0;
+  font-size: 20px;
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6
+  font-weight: 500;
+}
+
+.Pcard-body {
+<<<<<<< HEAD
+  padding: 20px;
+}
+
+.Pcard-body table {
+  margin-bottom
+  .Pcard-body table {
+    margin-bottom: 10px;
+  }
+  
+  .Pcard-body table td {
+    padding: 5px 0;
+  }
+  
+  .Pcard-body table td:first-child {
+    font-weight: 500;
+    color: #3b577d;
+    width: 70%;
+  }
+  
+  .Pcard-body table td:last-child {
+    font-weight: 500;
+    width: 30%;
+    text-align: right;
+    color: #3b577d;
+  }
+  
+  .Pcard-body ul {
+    padding: 0;
+    margin: 10px 0 0;
+  }
+  
+  .Pcard-body ul li {
+    list-style: none;
+    margin: 5px 0;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #3b577d;
+  }
+  
+  .BookBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .BookBtn button {
+    padding: 10px 20px;
+    background-color: #3b577d;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .BookBtn button:hover {
+    background-color: #2d4368;
+  }
+  
+=======
+  padding: 10px;
+}
+.Pcard-body table {
+  text-align: left;
+}
+
+.Pcard-body p {
+  margin: 0;
+  font-size: 80px;
+  line-height: 1.5;
+}
+/* Book-btn */
+.BookBtn a {
+  color: white !important;
+}
+.BookBtn button {
+  padding: 2px;
+  border-radius: 5px;
+  background-color: #3b577d;
+  border: none;
+  color: white !important;
+}
+.BookBtn {
+  align-items: right;
+  display: flex !important;
+  justify-content: right;
+  justify-items: right;
+}
+>>>>>>> c7670646d5b4952889d209edb78bafeced4ab2b6

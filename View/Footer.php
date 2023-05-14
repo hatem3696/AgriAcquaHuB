@@ -13,7 +13,7 @@
     <p>Email: info@ag-aqua-hub.com</p>
     <p>Phone: 555-1234</p>
     <p style="font-size: 16px; margin: 0;">&copy; <?php echo date("Y"); ?> Agriculture Aquaculture Hub</p>
-    <p class="designer">Designed by Abdul Hayee</p>
+    <p class="designer">Designed by Abdul Hayee, Pranta Das Gupta </p>
 </footer>
 </body>
 </html>

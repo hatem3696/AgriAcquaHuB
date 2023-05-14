@@ -2,10 +2,83 @@
 <html>
 <head>
 	<title> Fish information</title>
-	<link rel="stylesheet" href="CSS/buyfishfarming.css">
+	<style>
+		/* Styles for the main title */
+.main-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Styles for the paragraph */
+p {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Styles for the form */
+#fish-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* Styles for the radio buttons and labels */
+.fish-option {
+  display: none;
+  text-align: center;
+}
+
+.fish-option + label {
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding-left: 30px;
+  position: relative;
+}
+
+.fish-option + label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.fish-option:checked + label:before {
+  background-color: #333;
+  
+}
+
+/* Styles for the submit button */
+.submit-button {
+  display: block;
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #666;
+}
+</style>
 </head>
 <body>
-<?php include 'header.php'; ?>
+<?php include '../View/header.php'; ?>
+
 	<h1 class="main-title">Buy Fish for Farming</h1>
 	<p>Please select a fish from the list below:</p>
 	<form method="post" action="fishinfo.php" id="fish-form">
@@ -32,6 +105,8 @@
 		<input type="submit" name="submit" value="Submit" class="submit-button">
 	</form>
 </body>
+
+
 </html>
 <?php
 	// Check if the form has been submitted
@@ -50,4 +125,4 @@
 		}
 	}
 	?>
-<?php include '../Control/Footer.php'; ?>
+	<?php include '../View/Footer.php'; ?>

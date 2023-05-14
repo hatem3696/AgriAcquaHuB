@@ -37,10 +37,14 @@
 			font-size: 12px;
 			margin-bottom: 5px;
 		}
+		h1 {
+        text-align: center;
+      }
 	</style>
 </head>
 <body>
-	<h1>Buy Now</h1>
+<?php include '../View/header.php'; ?>
+	<h1 >Buy Now</h1>
 	<form method="POST" action="../Control/BuynowAction.php">
 		<label for="name">Name:</label>
 		<input type="text" name="name" id="name" value="<?php echo isset($_SESSION['name']) ? $_SESSION['name'] : ''; ?>">
@@ -64,5 +68,6 @@
 		<br>
 		<input type="submit" value="Submit">
 	</form>
+	<?php include '../View/Footer.php'; ?>
 </body>
 </html>

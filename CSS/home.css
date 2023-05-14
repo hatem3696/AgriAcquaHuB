@@ -1,0 +1,348 @@
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    line-height: 1.5;
+  }
+
+  #header {
+    background-color: gray;
+    padding: 20px;
+    text-align: center;
+  }
+
+  #header h1 {
+    margin: 0;
+    font-size: 32px;
+  }
+
+  #content {
+    padding: 20px;
+    text-align: center;
+  }
+
+  #content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #content p {
+    margin-bottom: 20px;
+  }
+
+  #content img {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .image {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .image:hover {
+    transform: scale(1.1);
+  }
+  .user-reviews {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+
+.review-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  width: 30%;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.review-card:hover .user-img {
+  transform: scale(1.2);
+}
+
+.user-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.user-name {
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.review-text {
+  font-style: italic;
+  color : grey ;
+}
+
+.review-card::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid white;
+  border-bottom: 10px solid transparent;
+  transform: rotate(-45deg);
+}
+
+.review-card::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid white;
+  border-top: 10px solid transparent;
+  transform: rotate(-45deg);
+}
+
+.review-card:nth-child(1) {
+  animation: slide-in-left 0.5s ease-out;
+}
+
+.review-card:nth-child(2) {
+  animation: slide-in-bottom 0.5s ease-out}
+  .product-categories ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  
+  .category-item {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .category-item a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .category-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #8bc34a;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .category-item:hover::before {
+    transform: translateY(0%);
+  }
+  
+  .category-item.plants::before {
+    background-color: #2196f3;
+  }
+  
+  .category-item.seeds::before {
+    background-color: #ff9800;
+  }
+  
+  .category-item.fishes::before {
+    background-color: #9c27b0;
+  }
+  
+  .product-categories h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .why-choose-us {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+  }
+  
+  .why-choose-us h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .grid-item {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .grid-item i {
+    font-size: 48px;
+    color: #8bc34a;
+    margin-bottom: 20px;
+  }
+  
+  .grid-item h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .grid-item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+  .category-menu {
+    position: relative;
+  }
+  
+  .category-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .category-menu li {
+    margin-right: 20px;
+  }
+  
+  .category-menu a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .category-menu a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sub-menu img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .category-menu a.plant:hover + .plant-menu,
+  .category-menu a.seed:hover + .seed-menu,
+  .category-menu a.fish:hover + .fish-menu {
+    display: block;
+  }
+  .agri-aqua-hub .feature-item {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  
+  .agri-aqua-hub .feature-item img {
+    transition: all 0.5s ease;
+  }
+  
+  .agri-aqua-hub .feature-item:hover img {
+    transform: scale(1.2);
+  }
+  
+  .agri-aqua-hub .feature-item:hover .feature-title {
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+  
+  .agri-aqua-hub .feature-item:hover .feature-description {
+    transform: translateY(50%);
+    opacity: 1;
+  }
+  
+  .agri-aqua-hub .feature-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .agri-aqua-hub .feature-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .agri-aqua-hub .btn {
+    transition: all 0.5s ease;
+  }
+  
+  .agri-aqua-hub .feature-item:hover .btn {
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+  .agri-aqua-hub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .feature-img {
+    max-height: 250px;
+  }
+    
+  
