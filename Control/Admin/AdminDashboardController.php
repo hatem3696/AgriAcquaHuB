@@ -1,116 +1,47 @@
 <?php
-function getCustomers()
-{
-    include_once('../../Model/Admin/AdminDashboardModel.php');
-    $num_rows = getCustomersNum();
-    return $num_rows;
-}
-function getEmployees()
-{
-    include_once('../../Model/Admin/AdminDashboardModel.php');
-    $num_rows = getEmployeesNum();
-    return $num_rows;
-}
-function getHotels()
-{
-    include_once('../../Model/Admin/AdminDashboardModel.php');
-    $num_rows = getHotelsNum();
-    return $num_rows;
-}
 function getPackages()
 {
     include_once('../../Model/Admin/AdminDashboardModel.php');
-    $num_rows = getPackagesNum();
+    $num_rows = getPackNum();
     return $num_rows;
 }
-function getTopSelling()
+function getWorkshops()
 {
     include_once('../../Model/Admin/AdminDashboardModel.php');
-    $num_rows = getTopSellingNum();
+    $num_rows = getWorkNum();
     return $num_rows;
 }
-function getBookings()
+function getUsers()
 {
     include_once('../../Model/Admin/AdminDashboardModel.php');
-    $num_rows = getBookingsNum();
+    $num_rows = getUsersNum();
     return $num_rows;
 }
-function viewHotels()
-{
-    include_once('../../Model/Admin/AdminDashboardModel.php');
-    $result = getHotel();
-    return $result;
-}
-function viewTopSelling()
-{
-    include_once('../../Model/Admin/AdminDashboardModel.php');
-    $result = getTopSellings();
-    return $result;
-}
-function viewBooking()
-{
-    include_once('../../Model/Admin/AdminDashboardModel.php');
-    $result = getBooking();
-    return $result;
-}
+
 function renderDashboardCards()
 {
-    $customers = getCustomers();
-    $employees = null;
-    if ($_SESSION['role'] == "admin") {
-        $employees = getEmployees();
-    }
-    $hotels = getHotels();
+    $users = getUsers();
     $packages = getPackages();
-    $topSelling = getTopSelling();
-    $bookings = getBookings();
+    $workshops = getWorkshops();
 
     ?>
 <div class="cardContainer">
-    <a href="ViewCustomers.php">
-        <div class="card">
-            <div class="card-header">
-                <h3>Customers</h3>
-            </div>
-            <div class="card-body">
-                <p>
-                    <?php echo $customers ?>
-                </p>
-            </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Total Users</h3>
         </div>
-    </a>
-    <?php if ($_SESSION['role'] == "admin") { ?>
-    <a href="ViewEmployee.php">
-        <div class="card">
-            <div class="card-header">
-                <h3>Employees</h3>
-            </div>
-            <div class="card-body">
-                <p>
-                    <?php echo $employees ?>
-                </p>
-            </div>
+        <div class="card-body">
+            <p>
+                <?php echo $users ?>
+            </p>
         </div>
-    </a>
-    <?php } ?>
-    <a href="ViewHotel.php">
-        <div class="card">
-            <div class="card-header">
-                <h3>Hotels</h3>
-            </div>
-            <div class="card-body">
-                <p>
-                    <?php echo $hotels ?>
-                </p>
-            </div>
-        </div>
-    </a>
-</div>
-<div class="cardContainer">
+    </div>
+
     <a href="ViewPackages.php">
         <div class="card">
             <div class="card-header">
-                <h3>Packages</h3>
+                <h3>Total Packages</h3>
             </div>
             <div class="card-body">
                 <p>
@@ -119,26 +50,14 @@ function renderDashboardCards()
             </div>
         </div>
     </a>
-    <a href="TopSelling.php">
+    <a href="ViewWorkshops.php">
         <div class="card">
             <div class="card-header">
-                <h3>Packages Sold</h3>
+                <h3>Total Workshops</h3>
             </div>
             <div class="card-body">
                 <p>
-                    <?php echo $topSelling ?>
-                </p>
-            </div>
-        </div>
-    </a>
-    <a href="ViewBookings.php">
-        <div class="card">
-            <div class="card-header">
-                <h3>Bookings</h3>
-            </div>
-            <div class="card-body">
-                <p>
-                    <?php echo $bookings ?>
+                    <?php echo $workshops ?>
                 </p>
             </div>
         </div>
