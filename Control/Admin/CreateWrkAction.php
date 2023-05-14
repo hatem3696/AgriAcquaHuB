@@ -8,65 +8,52 @@ if (session_status() === PHP_SESSION_NONE) {
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     $Name = sanitize($_POST['Name']);
-    $Type = sanitize($_POST['Type']);
+    $category = sanitize($_POST['category']);
     $Description = sanitize($_POST['Description']);
     $Start_Date = sanitize($_POST['Start_Date']);
 
 
     $isValid = false;
     $pkgNameValidity = false;
-
-    //Check package name Validity
-    require('../../Model/Admin/PackagesModel.php');
-    $result = validatePkgName($Name);
-    if ($result == false) {
-        $_SESSION['CreatePkgError'] = "This Package Name already exists";
-        header("Location: ../../View/Admin/CreatePackage.php");
-        exit();
-    } else if ($result == true) {
-        $pkgNameValidity = true;
-    }
-
-    //checks if fields are filled or not
     if (
-        empty($Type) && empty($Name) && empty($Start_Date) 
+        empty($category) && empty($Name) && empty($Start_Date)
     ) {
         $_SESSION['CreatePkgError'] = "Please fill all the required fields";
-        header("Location: ../../View/Admin/CreatePackage.php");
+        header("Location: ../../View/Admin/CreateWorkshop.php");
         exit();
-
     } else if (empty($Name)) {
         $_SESSION['CreatePkgError'] = "Name cannot be empty";
-        header("Location: ../../View/Admin/CreatePackage.php");
+        header("Location: ../../View/Admin/CreateWorkshop.php");
         exit();
-    } else if (empty($Type)) {
-        $_SESSION['CreatePkgError'] = "Type cannot be empty";
-        header("Location: ../../View/Admin/CreatePackage.php");
+    } else if (empty($category)) {
+        $_SESSION['CreatePkgError'] = "category cannot be empty";
+        header("Location: ../../View/Admin/CreateWorkshop.php");
         exit();
     } else if (empty($Start_Date)) {
-        $_SESSION['CreatePkgError'] = "Starting Date cannot be empty";
-        header("Location: ../../View/Admin/CreatePackage.php");
+        $_SESSION['CreatePkgError'] = "Date cannot be empty";
+        header("Location: ../../View/Admin/CreateWorkshop.php");
         exit();
     } else if (
-        !empty($Name) && !empty($Type) && !empty($Start_Date)
+        !empty($Name) && !empty($category) && !empty($Start_Date)
     ) {
         $isValid = true;
     }
 
 
     if (
-        !empty($Name) && !empty($Type) && !is_numeric($Name) && !empty($Price) && !empty($P_left) && !empty($Days) && !empty($Start_Date)
+        !empty($Name) && !empty($category) && !is_numeric($Description) && !empty($Start_Date)
         && $isValid === true && $pkgNameValidity = true
     ) {
-        $result = createPackage($Name, $Type, $Description, $Price, $Days, $P_left, $Start_Date, $End_Date, $Img_url);
+        include('../Connection.php');
+        $sql = "insert into workshops (name, category, description, time) values('$Name', '$category', '$Description' , '$Start_Date')";
+        $result = mysqli_query($con, $sql);
         if ($result) {
             $_SESSION['CreatePkgError'] = "Package Added Successfully";
-            header("Location: ../../View/Admin/CreatePackage.php");
+            header("Location: ../../View/Admin/CreateWorkshop.php");
         }
-
     } else {
         $_SESSION['CreatePkgError'] = "Please provide valid informations";
-        header("Location: ../../View/Admin/CreatePackage.php");
+        header("Location: ../../View/Admin/CreateWorkshop.php");
     }
 }
 
@@ -90,4 +77,3 @@ function c_getTypeof()
     $result = catType();
     return $result;
 }
-?>
