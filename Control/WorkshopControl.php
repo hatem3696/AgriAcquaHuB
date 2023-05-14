@@ -1,8 +1,8 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     include('Connection.php');
-    $arr = array(); 
-    
+    $arr = array();
+
     if ($_GET['type'] == 1) {
         $sql = "SELECT `name`, `description`, `category`, `time` FROM `workshops` WHERE `category` = 'Agriculture';";
         $result = $con->query($sql);
@@ -29,4 +29,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         echo json_encode($arr);
     }
 }
-?>
