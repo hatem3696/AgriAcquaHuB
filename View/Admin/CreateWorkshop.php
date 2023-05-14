@@ -63,10 +63,10 @@ include('../../Control/Admin/CreateWrkAction.php');
                                         <td>:</td>
                                         <td>
                                             <?php
-                                            $result = getTypeof();
-                                            echo "<select class='hselect'name='Type'>";
+                                            $result = c_getTypeof();
+                                            echo "<select class='hselect'name='category'>";
                                             while ($row = $result->fetch_assoc()) {
-                                                echo "<option value='" . $row["Type"] . "'>" . $row["Type"] . "</option>";
+                                                echo "<option value='" . $row["category"] . "'>" . $row["category"] . "</option>";
                                             }
                                             echo "</select>";
                                             ?>

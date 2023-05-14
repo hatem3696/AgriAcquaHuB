@@ -84,4 +84,10 @@ function getTypeof()
     $result = returnType();
     return $result;
 }
+function c_getTypeof()
+{
+    require('../../Model/Admin/PackagesModel.php');
+    $result = catType();
+    return $result;
+}
 ?>
