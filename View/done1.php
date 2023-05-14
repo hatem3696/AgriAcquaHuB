@@ -22,8 +22,10 @@
 	</style>
 </head>
 <body>
+<?php include '../View/header.php'; ?>
 	<h1>Your application is done!</h1>
 	<img src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Congratulations">
 	<p>Hope for the best. Thank you for applying!</p>
+	<?php include '../View/Footer.php'; ?>
 </body>
 </html>
