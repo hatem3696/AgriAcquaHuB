@@ -32,82 +32,82 @@ if (isset($_GET['updatePack'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Update Packages</title>
     <style>
     /* Style for the fieldset */
-fieldset {
-  border: 4px solid #3B577D;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-  margin-bottom: 20px;
-}
+    fieldset {
+        border: 4px solid #3B577D;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        margin-bottom: 20px;
+    }
 
-/* Style for the legend */
-legend {
-  text-align: center;
-  font-size: 28px;
-  font-weight: bold;
-}
+    /* Style for the legend */
+    legend {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+    }
 
-/* Style for the labels */
-label {
-  font-size: 20px;
-  font-weight: bold;
-}
+    /* Style for the labels */
+    label {
+        font-size: 20px;
+        font-weight: bold;
+    }
 
-/* Style for the input fields */
-input[type=text], input[type=date] {
-  padding: 8px;
-  width: 250px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: none;
-  border-bottom: 2px solid #3B577D;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
+    /* Style for the input fields */
+    input[type=text],
+    input[type=date] {
+        padding: 8px;
+        width: 250px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        border-bottom: 2px solid #3B577D;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
 
-/* Style for the select field */
-select {
-  padding: 8px;
-  width: 250px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: none;
-  border-bottom: 2px solid #3B577D;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
+    /* Style for the select field */
+    select {
+        padding: 8px;
+        width: 250px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        border-bottom: 2px solid #3B577D;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
 
-/* Style for the error messages */
-.ErrorMsg {
-  color: red;
-  font-size: 16px;
-  margin-top: 5px;
-}
+    /* Style for the error messages */
+    .ErrorMsg {
+        color: red;
+        font-size: 16px;
+        margin-top: 5px;
+    }
 
-/* Style for the submit button */
-.input-btn {
-  background-color: #3B577D;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 10px;
-}
+    /* Style for the submit button */
+    .input-btn {
+        background-color: #3B577D;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
 
-/* Style for the error message in the form */
-p[style="color:red; font-weight:500"] {
-  font-size: 16px;
-  font-weight: bold;
-  color: red;
-  margin-bottom: 10px;
-}
-
+    /* Style for the error message in the form */
+    p[style="color:red; font-weight:500"] {
+        font-size: 16px;
+        font-weight: bold;
+        color: red;
+        margin-bottom: 10px;
+    }
     </style>
 </head>
 
@@ -132,7 +132,7 @@ p[style="color:red; font-weight:500"] {
                     <div>
                         <form method="POST"
                             action="../../Control/Admin/UpdatePackageController.php?updateid=<?php echo $Package_Id ?>"
-                            onsubmit="return updatePackCheck()">
+                            onsubmit="return upPackError()">
                             <div>
                                 <table align="center" style="text-align: left">
                                     <tr>
@@ -152,7 +152,7 @@ p[style="color:red; font-weight:500"] {
                                             <?php
                                             require_once('../../Control/Admin/UpdatePackageController.php');
                                             $result = c_getType();
-                                            echo "<select class='hselect'name='Type'>";
+                                            echo "<select class='hselect' id='Type' name='Type'>";
                                             ?>
                                             <option selected="selected">
                                                 <?php echo $Type; ?>
@@ -166,7 +166,7 @@ p[style="color:red; font-weight:500"] {
                                         </td>
                                         <td>*</td>
                                         <td>
-                                            <p class="ErrorMsg" id="hotelError"></p>
+                                            <p class="ErrorMsg" id="typeError"></p>
                                         </td>
                                     </tr>
                                     <tr>
@@ -245,7 +245,7 @@ p[style="color:red; font-weight:500"] {
         <?php
         include('../../View/Footer.php');
         ?>
-        <script src="../../View/js/AdminPanel.js"></script>
+        <script src="../../View/js/adminPanel.js"></script>
 </body>
 
 </html>

@@ -33,18 +33,18 @@ if (session_status() == PHP_SESSION_NONE) {
                 <li><a href="../aboutus.php">About us</a></li>
                 <li><a href="../contact_us.php">Contact us</a></li>
                 <?php
-                    if (isset($_SESSION['username'])) {
+                if (isset($_SESSION['username'])) {
 
-                        if ($_SESSION['role'] == 'admin') {
-                        ?>
+                    if ($_SESSION['role'] == 'admin') {
+                ?>
                 <li><a href="AdminPanel.php">Admin Panel</a></li>
 
 
 
                 <?php }
-                    } ?>
+                } ?>
             </ul>
-            <button type="button"><a href="Registration.php">Sign up</a></button>
+            <button type="button"><a href="../Registration.php">Sign up</a></button>
         </nav>
     </div>
 </body>

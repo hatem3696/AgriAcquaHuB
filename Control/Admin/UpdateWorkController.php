@@ -55,8 +55,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $_SESSION['updatePackError'] = "Time cannot be empty";
         header("Location: ../../View/Admin/UpdateWorkshop.php?updateWork=$id");
         exit();
-    }  else if (
-        !empty($name) && !empty($category) && !empty($description) && !empty($time) 
+    } else if (
+        !empty($name) && !empty($category) && !empty($description) && !empty($time)
     ) {
         $isValid = true;
     }
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     if (
         !empty($name) && !empty($description) && !is_numeric($name) && !empty($category) && !empty($time)
-     && $isValid === true && $pkgNameValidity = true
+        && $isValid === true && $pkgNameValidity = true
     ) {
         $result = UpdateWorkshop($id, $name, $category, $description, $time);
         if ($result) {

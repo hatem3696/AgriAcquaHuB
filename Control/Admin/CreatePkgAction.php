@@ -40,7 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $_SESSION['CreatePkgError'] = "Please fill all the required fields";
         header("Location: ../../View/Admin/CreatePackage.php");
         exit();
-
     } else if (empty($Name)) {
         $_SESSION['CreatePkgError'] = "Name cannot be empty";
         header("Location: ../../View/Admin/CreatePackage.php");
@@ -81,7 +80,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $_SESSION['CreatePkgError'] = "Package Added Successfully";
             header("Location: ../../View/Admin/CreatePackage.php");
         }
-
     } else {
         $_SESSION['CreatePkgError'] = "Please provide valid informations";
         header("Location: ../../View/Admin/CreatePackage.php");
@@ -102,4 +100,3 @@ function getTypeof()
     $result = returnType();
     return $result;
 }
-?>
