@@ -45,4 +45,16 @@ if (isset($_GET['deletePack'])) {
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
 }
+if (isset($_GET['deleteWork'])) {
+    $id = $_GET['deleteWork'];
+    include_once('../../Model/Admin/AdminModel.php');
+    $result = deleteWork($id);
+    if ($result) {
+        $_SESSION['message'] = "Operation completed successfully";
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    } else {
+        $_SESSION['message'] = "Error deleting record";
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }
+}
 ?>

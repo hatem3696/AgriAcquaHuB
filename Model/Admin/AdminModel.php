@@ -37,5 +37,17 @@ function deletePack($id)
     return $result;
 }
 
+function deleteWork($id)
+{
+    require_once('../../Model/Connection.php');
+    $stmt = $con->prepare("DELETE FROM workshops WHERE id=?");
+    $stmt->bind_param("i", $id);
+    $result = $stmt->execute();
+
+    $stmt->close();
+    $con->close();
+
+    return $result;
+}
 
 ?>

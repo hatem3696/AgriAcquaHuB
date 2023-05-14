@@ -65,3 +65,47 @@ function updatePackage($Package_Id, $Name, $Type, $Description, $Price, $Days, $
         return true;
     } else return false;
 }
+
+///////
+function getWorks($id)
+{
+    require('../../Model/Connection.php');
+    $sql = "select * from workshops where id = $id";
+    $result = $con->query($sql);
+    return $result;
+}
+function catType()
+{
+    require('../../Model/Connection.php');
+    $sql = "SELECT DISTINCT category FROM workshops;";
+    $result = $con->query($sql);
+    return $result;
+}
+function validatePWorkName($name)
+{
+    require('../../Model/Connection.php');
+    $chkWorkName = "SELECT * FROM workshops WHERE name = '" . $name . "'";
+    $result = mysqli_query($con, $chkWorkName);
+    if (mysqli_num_rows($result) > 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
+function c_validateWorkName($name)
+{
+    require('../../Model/Connection.php');
+    $chkPkgName = "SELECT * FROM workshops WHERE name = '$name' AND id = $id";
+    $result = mysqli_query($con, $chkPkgName);
+    return $result;
+}
+function UpdateWorkshop($id, $name, $category, $description, $time)
+{
+    require('../../Model/Connection.php');
+    $update = "UPDATE `workshops` SET `name`='$name', `description`='$description', `category`='$category', `time`='$time' WHERE `id`=$id";
+    $result = mysqli_query($con, $update);
+    if ($update) {
+        return true;
+    } else return false;
+}
+?>

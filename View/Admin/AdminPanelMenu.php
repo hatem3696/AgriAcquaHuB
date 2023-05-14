@@ -39,7 +39,7 @@ if ($_SESSION['role'] !== "admin" && $_SESSION['role'] !== "employee") {
             <a href="CreateWorkshop.php">Create Workshop</a>
         </button>
         <button class="button">
-            <a href="ViewPackages.php">View Workshop</a>
+            <a href="ViewWorkshops.php">View Workshop</a>
         </button>
 
     </div>
